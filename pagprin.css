@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.headertopo {   
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 100px;
+}
+
+.headertopo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: 	#161616;
+}
+
+.headertopo h1 {
+    margin-top: auto;
+}
+
+.headerbaixo {
+    background-color: #36465D;
+    color: aliceblue;
+}
+
+.headerbaixo {
+    display: flex;
+    justify-content: center;
+    text-indent: 20px;
+    height: 50px;
+}
+
+.headerbaixo h4 {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+
+.antes, .depois {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+}
+
+.depois {
+    left: 100%;
+    transition: left 1s;
+    display: flex;
+    justify-content: left;
+    background-color: #02020277;
+}
+
+.depois h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    width: 500px;
+    font-size: 60px;
+}
+
+.crianinicio {
+    width: 100%;
+    height: 1000px;
+}
+
+
+.arrastarimg {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    overflow: hidden;
+}
+
+.arrastarimg:hover .depois {
+    left: 0%;
+}
+
+.introducao {
+    font-size: 80px;
+}
+
+.paragrafo {
+    width: 65%;
+    text-align: justify;
+    margin-left: 75px;
+
+}
