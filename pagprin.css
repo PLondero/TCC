@@ -5,6 +5,52 @@ body {
     font-style: normal; 
 }
 
+@media screen and (max-width: 1020px) {
+  body {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerbaixo h4 {
+    font-size: 15px;
+}
+
+  .arrastarimg {
+    display: flex;
+    height: 500px;
+  }
+
+  .arrastarimg img {
+    height: 500px;
+
+  }
+
+  .arrastarimg .depois {
+    height: 500px;
+  }
+
+  .arrastarimg .depois h1 {
+    font-size: 30px;
+    margin-left: 30px;
+  }
+
+  .introducao {
+    margin-top: -400px;
+    font-size: 5px;
+  }
+}
+
+
+
 p {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
