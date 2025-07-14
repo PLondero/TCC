@@ -5,52 +5,6 @@ body {
     font-style: normal; 
 }
 
-@media screen and (max-width: 1020px) {
-  body {
-    font-size: 16px;
-    padding: 20px;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .headerbaixo h4 {
-    font-size: 15px;
-}
-
-  .arrastarimg {
-    display: flex;
-    height: 500px;
-  }
-
-  .arrastarimg img {
-    height: 500px;
-
-  }
-
-  .arrastarimg .depois {
-    height: 500px;
-  }
-
-  .arrastarimg .depois h1 {
-    font-size: 30px;
-    margin-left: 30px;
-  }
-
-  .introducao {
-    margin-top: -400px;
-    font-size: 5px;
-  }
-}
-
-
-
 p {
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
@@ -142,7 +96,21 @@ p {
     left: 0%;
 }
 
-.introducao {
+
+.part1, .part2, .part3 {
+  height: 700px;
+}
+
+.part2 {
+  background-color: #36465D;
+  color: white;
+}
+
+.part2 .introducao h1{
+  padding-top: 50px;
+}
+
+.introducao h1 {
     font-size: 80px;
 }
 
@@ -151,4 +119,89 @@ p {
     text-align: justify;
     margin-left: 75px;
 
+}
+
+.quiz {
+  background-color:#36465D ;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.botao button{
+  background-color:#314055 ;
+  color: white;
+  padding: 15px 30px;
+  font-size: 70px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.botao:hover {
+  filter: drop-shadow( 0 0 30px rgba(255, 255, 255, 0.4));
+  transform: scale(1.03);
+  transition: 1s;
+}
+
+.botao:not(:hover){
+  transition: 0.7s;
+}
+
+
+.botao:active {
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  transform: scale(0.90);
+  transition: 0.2s;
+  filter: drop-shadow(0 0 30px black);
+}
+
+
+@media screen and (max-width: 1020px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerbaixo h4 {
+    font-size: 13px;
+}
+
+  .arrastarimg {
+    display: flex;
+    height: 500px;
+  }
+
+  .arrastarimg img {
+    height: 500px;
+
+  }
+
+  .arrastarimg .depois {
+    height: 500px;
+  }
+
+  .arrastarimg .depois h1 {
+    font-size: 30px;
+    margin-left: 30px;
+    width: 170px;
+  }
+
+  .introducao h1 {
+    font-size: 50px;
+  }
 }
