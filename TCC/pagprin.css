@@ -3,6 +3,7 @@ body {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal; 
+    overflow: hidden;
 }
 
 p {
@@ -63,19 +64,50 @@ p {
     left: 100%;
     transition: left 1s;
     display: flex;
+    flex-direction: column;
     justify-content: left;
     background-color: #02020277;
 }
 
+.seta1 {
+  margin-left: 70px;
+  margin-bottom: auto;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  height: 60px;
+}
+
+.seta1 h2{
+  font-size: 30px;
+  margin: auto;
+} 
+
+.seta1:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.seta1:not(:hover){
+  transition: 0.7s;
+}
+
+
+.seta1:active {
+  transform: scale(0.90);
+  transition: 0.2s;
+}
+
+
 .depois h1 {
     margin-top: auto;
-    margin-bottom: auto;
     margin-left: 70px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: white;
-    width: 500px;
+    width: 600px;
     font-size: 60px;
 }
 
@@ -98,7 +130,7 @@ p {
 
 
 .part1, .part2, .part3, .part4, .part5 {
-  height: 700px;
+  height: 900px;
 }
 
 .part2, .part4 {
@@ -162,6 +194,7 @@ p {
   transition: 0.2s;
   filter: drop-shadow(0 0 30px black);
 }
+
 
 
 @media screen and (max-width: 1020px) {
