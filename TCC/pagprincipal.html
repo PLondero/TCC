@@ -31,6 +31,9 @@
 
                 <div class="depois">
                     <h1> Venha aprender a ter uma boa Educação financeira!</h1>
+                    <button class="seta1" id="seta1"> 
+                        <h2> Clique aqui! </h2>
+                    </button>
                 </div>
             </div>
 
@@ -87,4 +90,38 @@
             </div>
         </div>
     </body>
+    
+    <script>
+    const botao = document.getElementById('seta1');
+
+    function scrollSuave(destino, duracao) {
+    const inicio = window.scrollY;
+    const distancia = destino - inicio;
+    const comeco = performance.now();
+
+    function animar(tempoAtual) {
+        const tempoPassado = tempoAtual - comeco;
+        const progresso = Math.min(tempoPassado / duracao, 1); // de 0 a 1
+        window.scrollTo(0, inicio + distancia * progresso);
+
+        if (progresso < 1) {
+            requestAnimationFrame(animar);
+        }
+    }
+
+    requestAnimationFrame(animar);
+}
+
+    botao.addEventListener('click', () => {
+        // Libera o scroll
+        document.body.style.overflow = 'auto';
+        scrollSuave(window.innerHeight + 240, 900);
+        
+        // Desce suavemente até o próximo bloco
+        window.scrollTo({
+            top: window.innerHeight + 240,
+            behavior: 'smooth'
+        });
+    });
+</script>
 </html>
