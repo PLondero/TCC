@@ -61,12 +61,9 @@ p {
 }
 
 .depois {
-    left: 100%;
-    transition: left 1s;
     display: flex;
     flex-direction: column;
     justify-content: left;
-    background-color: #02020277;
 }
 
 .seta1 {
@@ -112,14 +109,14 @@ p {
 }
 
 .crianinicio {
-    width: 100%;
-    height: 1000px;
+    width: 1880px;
+    height: 800px;
 }
 
 
 .arrastarimg {
     width: 100%;
-    height: 1000px;
+    height: 800px;
     position: relative;
     overflow: hidden;
 }
@@ -131,6 +128,10 @@ p {
 
 .part1, .part2, .part3, .part4, .part5 {
   height: 900px;
+}
+
+.part1 .introducao, .part2 .introducao, .part3 .introducao, .part4 .introducao, .part5 .introducao {
+  margin-left: 20px;
 }
 
 .part2, .part4 {
