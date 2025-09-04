@@ -1,0 +1,243 @@
+body {
+    margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal; 
+    overflow: hidden;
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+.headertopo {   
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    height: 100px;
+}
+
+.headertopo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: 	#161616;
+}
+
+.headertopo h1 {
+    margin-top: auto;
+}
+
+.headerbaixo {
+    background-color: #36465D;
+    color: aliceblue;
+}
+
+.headerbaixo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.headerbaixo h4 {
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    text-indent: 10px;
+    margin-right: 20px;
+}
+
+
+.antes, .depois {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+}
+
+.depois {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.seta1 {
+  margin-left: 70px;
+  margin-bottom: auto;
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  height: 60px;
+}
+
+.seta1 h2{
+  font-size: 30px;
+  margin: auto;
+} 
+
+.seta1:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.seta1:not(:hover){
+  transition: 0.7s;
+}
+
+
+.seta1:active {
+  transform: scale(0.90);
+  transition: 0.2s;
+}
+
+
+.depois h1 {
+    margin-top: auto;
+    margin-left: 70px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    width: 600px;
+    font-size: 60px;
+}
+
+.crianinicio {
+    width: 1880px;
+    height: 800px;
+}
+
+
+.arrastarimg {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+}
+
+.arrastarimg:hover .depois {
+    left: 0%;
+}
+
+
+.part1, .part2, .part3, .part4, .part5 {
+  height: 900px;
+}
+
+.part1 .introducao, .part2 .introducao, .part3 .introducao, .part4 .introducao, .part5 .introducao {
+  margin-left: 20px;
+}
+
+.part2, .part4 {
+  background-color: #36465D;
+  color: white;
+}
+
+
+
+.part2, .part4 .introducao h1{
+  padding-top: 50px;
+}
+
+.introducao h1 {
+    font-size: 80px;
+}
+
+.paragrafo {
+    width: 65%;
+    text-align: justify;
+    margin-left: 75px;
+
+}
+
+.quiz {
+  background-color:#36465D ;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.botao button{
+  background-color:#314055 ;
+  color: white;
+  padding: 15px 30px;
+  font-size: 70px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.botao:hover {
+  filter: drop-shadow( 0 0 30px rgba(255, 255, 255, 0.4));
+  transform: scale(1.03);
+  transition: 1s;
+}
+
+.botao:not(:hover){
+  transition: 0.7s;
+}
+
+
+.botao:active {
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  transform: scale(0.90);
+  transition: 0.2s;
+  filter: drop-shadow(0 0 30px black);
+}
+
+
+
+@media screen and (max-width: 1020px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerbaixo h4 {
+    font-size: 13px;
+}
+
+  .arrastarimg {
+    display: flex;
+    height: 500px;
+  }
+
+  .arrastarimg img {
+    height: 500px;
+
+  }
+
+  .arrastarimg .depois {
+    height: 500px;
+  }
+
+  .arrastarimg .depois h1 {
+    font-size: 30px;
+    margin-left: 30px;
+    width: 170px;
+  }
+
+  .introducao h1 {
+    font-size: 50px;
+  }
+}

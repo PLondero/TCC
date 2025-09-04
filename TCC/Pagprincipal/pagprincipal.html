@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Educação Financeira</title>
+        <link rel="stylesheet" href="pagprin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+        
+    </head>
+    <body>
+        <div class="container">
+            <header class="headertopo"> 
+                <h1> Educação Financeira</h1>
+            </header>
+
+            <header class="headerbaixo">
+                <h4> Home </h4>
+                <h4> Quiz </h4>
+            </header>
+
+            <div class="arrastarimg">
+                <div class="antes">
+                    <img src="img1.png" class="crianinicio">
+                </div>
+
+                <div class="depois">
+                    <h1> Comece hoje sua jornada de educação financeira!    </h1>
+                    <button class="seta1" id="seta1"> 
+                        <h2> Clique aqui! </h2>
+                    </button>
+                </div>
+            </div>
+
+            <div class="part1">
+                <div class="introducao">
+                <h1>Oque é uma boa Educação Financeira?</h1>
+                </div>
+
+                <div class="paragrafo">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, praesentium sit. Eius fuga veritatis, nemo, explicabo id tempore eos ducimus alias sapiente ab asperiores repellat at eligendi, accusantium placeat? Ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus voluptatibus quo, neque odit aperiam unde maxime atque. Repellat officia ipsa aut corrupti, delectus id minima iure aliquid nobis consequuntur.</p>
+                </div>
+                
+            </div>
+
+            <div class="part2">
+                <div class="introducao">
+                    <h1>Desafios da Educação Financeira no Brasil</h1>
+                </div>
+                <div class="paragrafo">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, praesentium sit. Eius fuga veritatis, nemo, explicabo id tempore eos ducimus alias sapiente ab asperiores repellat at eligendi, accusantium placeat? Ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus voluptatibus quo, neque odit aperiam unde maxime atque. Repellat officia ipsa aut corrupti, delectus id minima iure aliquid nobis consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="part3">
+                <div class="introducao">
+                    <h1>Conceitos Basicos da Educação Financeira</h1>
+                </div>
+                <div class="paragrafo">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, praesentium sit. Eius fuga veritatis, nemo, explicabo id tempore eos ducimus alias sapiente ab asperiores repellat at eligendi, accusantium placeat? Ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus voluptatibus quo, neque odit aperiam unde maxime atque. Repellat officia ipsa aut corrupti, delectus id minima iure aliquid nobis consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="part4">
+                <div class="introducao">
+                    <h1>Como práticar a educação financeira?</h1>
+                </div>
+                <div class="paragrafo">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, praesentium sit. Eius fuga veritatis, nemo, explicabo id tempore eos ducimus alias sapiente ab asperiores repellat at eligendi, accusantium placeat? Ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus voluptatibus quo, neque odit aperiam unde maxime atque. Repellat officia ipsa aut corrupti, delectus id minima iure aliquid nobis consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="part5">
+                <div class="introducao">
+                    <h1>Uso da tecnologia na educação financeira</h1>
+                </div>
+                <div class="paragrafo">
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, praesentium sit. Eius fuga veritatis, nemo, explicabo id tempore eos ducimus alias sapiente ab asperiores repellat at eligendi, accusantium placeat? Ducimus? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ducimus voluptatibus quo, neque odit aperiam unde maxime atque. Repellat officia ipsa aut corrupti, delectus id minima iure aliquid nobis consequuntur.</p>
+                </div>
+            </div>
+
+            <div class="quiz">
+                <div class="botao">
+                    <a href="..\quiz\quiz.html">
+                    <button> Iniciar Quiz! </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+    <script>
+        window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+        };
+        
+    const botao = document.getElementById('seta1');
+
+    function scrollSuave(destino, duracao) {
+    const inicio = window.scrollY;
+    const distancia = destino - inicio;
+    const comeco = performance.now();
+
+    function animar(tempoAtual) {
+        const tempoPassado = tempoAtual - comeco;
+        const progresso = Math.min(tempoPassado / duracao, 1); // de 0 a 1
+        window.scrollTo(0, inicio + distancia * progresso);
+
+        if (progresso < 1) {
+            requestAnimationFrame(animar);
+        }
+    }
+
+    requestAnimationFrame(animar);
+}
+
+    botao.addEventListener('click', () => {
+        // Libera o scroll
+        document.body.style.overflow = 'auto';
+        scrollSuave(window.innerHeight + 40, 900);
+        
+        // Desce suavemente até o próximo bloco
+        window.scrollTo({
+            top: window.innerHeight + 240,
+            behavior: 'smooth'
+        });
+    });
+</script>
+</html>
