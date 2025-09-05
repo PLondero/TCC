@@ -82,6 +82,9 @@ function selectAnswer(e) {
         selectedBtn.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach((button) => {
+        if (button.dataset.id == correctAnswer.id) {
+            button.classList.add("correct");
+        }
         button.disabled = true;
     });
     nextButton.style.display = "block";
