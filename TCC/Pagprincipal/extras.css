@@ -1,0 +1,138 @@
+.headerbaixo button {
+    border: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    height: 40px;
+    margin-right: 10px;
+    background: none;
+    color: white;
+    font-size: 15px;
+}
+
+
+.headerbaixo {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+}
+
+.headerbaixo button:hover {
+    transform: scale(0.87);
+    transition: 1s;
+}
+
+.headerbaixo button:not(:hover){
+  transition: 0.7s;
+}
+
+
+.headerbaixo button:active {
+  transform: scale(0.10);
+  transition: 0.6s;
+}
+
+
+/* botões header */
+
+
+
+.botao1 {
+  margin-left: 70px;
+  margin-bottom: auto;
+  background-color:#36465D;
+  border-radius: 30px;
+  border: none;
+  width: 300px;
+  height: 60px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.botao1 h2{
+  font-size: 30px;
+  margin-top: 10px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+} 
+
+
+.botao1:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.botao1:not(:hover){
+  transition: 0.7s;
+}
+
+
+.botao1:active {
+  transform: scale(0.90);
+  transition: 0.2s;
+}
+
+/* botão inicial */
+
+
+.botao button{
+  background-color:#314055 ;
+  color: white;
+  padding: 15px 30px;
+  font-size: 70px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.botao:hover {
+  filter: drop-shadow( 0 0 30px rgba(255, 255, 255, 0.4));
+  transform: scale(1.03);
+  transition: 1s;
+}
+
+.botao:not(:hover){
+  transition: 0.7s;
+}
+
+
+.botao:active {
+  transition: box-shadow 0.5s ease, transform 0.3s ease;
+  transform: scale(0.90);
+  transition: 0.2s;
+  filter: drop-shadow(0 0 30px black);
+}
+
+/* botão quiz */
+
+
+.conjunto {
+  display: flex;
+  flex-direction: row;
+}
+
+.box1, .box2, .box3{
+  position: relative;
+  margin-top: 50px;
+}
+
+.box1, .box2, .box3 {
+    width: 300px;
+    height: 400px;
+    background-color: #36465D;
+    margin: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 8px 15px 50px 0px rgba(0,0,0,0.03); 
+    box-shadow: 0px 10px 13px -7px #000000, 8px 15px 50px 0px rgba(0,0,0,0.03);
+
+}
+
+/* Parte da primeira section part1 */

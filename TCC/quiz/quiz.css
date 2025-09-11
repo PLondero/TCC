@@ -88,6 +88,21 @@
     
 }
 
+#enviar {
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-style: normal; 
+    padding: 12px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 60px;
+    justify-self: center;
+    display: none;
+    
+}
+
 #next-btn:hover {
     transform: scale(1.05);
     transition: 0.5s;

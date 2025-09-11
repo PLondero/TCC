@@ -34,6 +34,7 @@ const questions = [
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
+const enviar = document.getElementById("enviar");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -94,6 +95,7 @@ function showScore() {
     resetState();
     questionElement.innerHTML = `Você acertou ${score} de ${questions.length}!`;
     nextButton.innerHTML = "Jogar denovo";
+    enviar.style.display = "block"
     nextButton.style.display ="block";
 }
 

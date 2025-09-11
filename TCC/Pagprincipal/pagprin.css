@@ -1,8 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Bebas Neue', sans-serif;
     font-style: normal; 
-    overflow: hidden;
 }
 
 p {
@@ -30,159 +33,60 @@ p {
   background: none;
   justify-content: center;
   margin-top: auto;
-  cursor: pointer;
-  transition: 2s;
 }
-
-.titulo1:hover{
-  left: 50%;
-}
-
 
 .headerbaixo {
     background-color: #36465D;
     color: aliceblue;
 }
 
-.headerbaixo button {
-    border: none;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    letter-spacing: 1px;
-    margin-top: 5px;
-    height: 40px;
-    margin-right: 10px;
-    background: none;
-    color: white;
-    font-size: 15px;
-}
 
 
-.headerbaixo {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 100%;
-}
-
-.headerbaixo button:hover {
-    transform: scale(0.87);
-    transition: 1s;
-}
-
-.headerbaixo button:not(:hover){
-  transition: 0.7s;
-}
-
-
-.headerbaixo button:active {
-  transform: scale(0.10);
-  transition: 0.6s;
-}
-
-
-.antes, .depois {
+.imginicial, .texto {
     width: 100%;
     height: 1000px;
     position: absolute;
 }
 
-.depois {
+.texto {
     display: flex;
     flex-direction: column;
     justify-content: left;
 }
 
-.seta1 {
-  margin-left: 70px;
-  margin-bottom: auto;
-  background-color: white;
-  border-radius: 30px;
-  border: none;
-  width: 300px;
-  height: 60px;
-}
-
-.seta1 h2{
-  font-size: 30px;
-  margin: auto;
-} 
-
-.seta1:hover {
-    transform: scale(1.05);
-    transition: 1s;
-}
-
-.seta1:not(:hover){
-  transition: 0.7s;
-}
 
 
-.seta1:active {
-  transform: scale(0.90);
-  transition: 0.2s;
-}
-
-
-.depois h1 {
+.texto h1 {
     margin-top: auto;
     margin-left: 70px;
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: white;
+    color:#36465D;
     width: 600px;
     font-size: 60px;
 }
 
-.crianinicio {
+.img1 {
     width: 100%;
-    height: 88%;
+    height: 85%;
 }
 
-
-.arrastarimg {
+.telaprincipal {
     width: 100%;
     height: 800px;
-    position: relative;
-    overflow: hidden;
 }
 
-.arrastarimg:hover .depois {
-    left: 0%;
+.fnd1 {
+ position: absolute;
 }
 
-
-.part1, .part2, .part3, .part4, .part5 {
+.part1 {
+  display: flex;
+  justify-content: center;
   height: 900px;
 }
 
-.part1 .introducao, .part2 .introducao, .part3 .introducao, .part4 .introducao, .part5 .introducao {
-  margin-left: 20px;
-}
-
-.part2, .part4 {
-  background-color: #36465D;
-  color: white;
-}
-
-
-
-.part2, .part4 .introducao h1{
-  padding-top: 50px;
-}
-
-.introducao h1 {
-    font-size: 80px;
-}
-
-.paragrafo {
-    width: 65%;
-    text-align: justify;
-    margin-left: 75px;
-
-}
 
 .quiz {
   background-color:#36465D ;
@@ -193,36 +97,7 @@ p {
 }
 
 
-.botao button{
-  background-color:#314055 ;
-  color: white;
-  padding: 15px 30px;
-  font-size: 70px;
-  cursor: pointer;
-  border: none;
-  border-radius: 10px;
-  transition: box-shadow 0.5s ease, transform 0.3s ease;
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.botao:hover {
-  filter: drop-shadow( 0 0 30px rgba(255, 255, 255, 0.4));
-  transform: scale(1.03);
-  transition: 1s;
-}
 
-.botao:not(:hover){
-  transition: 0.7s;
-}
-
-
-.botao:active {
-  transition: box-shadow 0.5s ease, transform 0.3s ease;
-  transform: scale(0.90);
-  transition: 0.2s;
-  filter: drop-shadow(0 0 30px black);
-}
 
 
 
