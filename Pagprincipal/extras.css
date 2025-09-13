@@ -53,14 +53,14 @@
   background-color:#36465D;
   border-radius: 30px;
   border: none;
-  width: 300px;
-  height: 60px;
+  width: 17%;
+  height: 80%;
   text-decoration: none;
   text-align: center;
 }
 
 .botao1 h2{
-  font-size: 30px;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   margin-top: 10px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -89,14 +89,14 @@
   border-radius: 30px;
   border: solid 2px;
   border-color: #36465D;
-  width: 300px;
-  height: 60px;
+  width: 17%;
+  height: 80%;
   text-decoration: none;
   text-align: center;
 }
 
 .botao2 h2{
-  font-size: 30px;
+  font-size: clamp(1.5rem, 5vw, 2rem);
   margin-top: 10px;
   color: #36465D;
   font-family: Arial, Helvetica, sans-serif;

@@ -83,7 +83,7 @@ p {
     font-weight: 400;
     font-style: normal;
     color:#36465D;
-    width: 600px;
+    width: 30%;
     font-size: 60px;
 }
 
@@ -137,31 +137,23 @@ p {
     align-items: center;
   }
 
-  .headerbaixo h4 {
-    font-size: 13px;
-}
-
-  .arrastarimg {
-    display: flex;
-    height: 500px;
+  .headertopo h1 {
+    font-size: 20px;
+  }
+  
+  .headertopo p {
+    font-size: 10px;
   }
 
-  .arrastarimg img {
-    height: 500px;
-
+  .botheader {
+    gap: 0.5px;
   }
 
-  .arrastarimg .depois {
-    height: 500px;
+  .texto h1{
+    font-size: 20px;
   }
 
-  .arrastarimg .depois h1 {
-    font-size: 30px;
-    margin-left: 30px;
-    width: 170px;
-  }
-
-  .introducao h1 {
-    font-size: 50px;
+  .botao1 h2 {
+    
   }
 }
