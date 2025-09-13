@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Educação Financeira</title>
-        <link rel="stylesheet" href="..\Pagprincipal/pagprin.css">
-        <link rel="stylesheet" href="..\Pagprincipal/extras.css">
+        <link rel="stylesheet" href="../Pagprincipal/pagprin.css">
+        <link rel="stylesheet" href="../Pagprincipal/extras.css">
 
 
 
@@ -20,12 +20,12 @@
             <header class="headertopo"> 
                 <div class="titulo1">
                     <div class="imglogo">
-                        <img class="educa" src="..\imgeral\EDUCA (50 x 50 px).png">
+                        <img class="educa" src="../imgeral/EDUCA (50 x 50 px).png">
                     </div>
                     <h1> EDUCAMONEY</h1>
                 </div>
                 <div class="botheader">
-                    <a href="..\pagprincipal.html">
+                    <a href="../pagprincipal.html">
                         <button> Home </button>
                         </a>
                         <a href="">
