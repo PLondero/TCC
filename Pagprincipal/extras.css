@@ -13,12 +13,6 @@
 }
 
 
-.headerbaixo {
-    display: flex;
-    justify-content: center;
-    height: 50px;
-    width: 100%;
-}
 
 .headertopo button:hover {
     transform: scale(0.87);

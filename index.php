@@ -17,13 +17,21 @@
     </head>
     <body>
         <div class="container">
+
+            <div class="imginicial">
+
+
             <header class="headertopo"> 
+
+
                 <div class="titulo1">
                     <div class="imglogo">
                         <img class="educa" src="imgeral\EDUCA (50 x 50 px).png">
                     </div>
                     <h1> EDUCAMONEY</h1>
                 </div>
+
+
                 <div class="botheader">
                     <a href="quiz/quiz.html">
                         <button> <p> Home </p> </button>
@@ -32,15 +40,12 @@
                         <button> <p> Entrar </p> </button>
                         </a>
                 </div>
-            </header>
 
-            <header class="headerbaixo">
+                
             </header>
+            
 
             <div class="telaprincipal">
-                <div class="imginicial">
-                    <img src="Pagprincipal/img1.jpg" class="img1">
-                </div>
 
                 <div class="texto">
                     <h1> Comece hoje sua jornada na educação financeira!    </h1>
@@ -54,6 +59,7 @@
                     </a>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div id="id1" class="part1">

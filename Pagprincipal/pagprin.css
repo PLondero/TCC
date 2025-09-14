@@ -15,11 +15,17 @@ p {
   letter-spacing: 1px;
 }
 
+.imginicial{
+  background-image: url(img1.svg);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .headertopo {   
+  background-color: transparent;
   display: flex;
   align-items: center;       
   justify-content: flex-end; 
-  background-color: white;
   height: 120px;             
   padding: 0 40px;
   position: relative;        
@@ -56,7 +62,7 @@ p {
 }
 
 .headerbaixo {
-  background-color: #36465D;
+  background-color: transparent;
 }
 
 
@@ -64,9 +70,12 @@ p {
 
 .imginicial, .texto {
     width: 100%;
-    height: 700px;
-    position: absolute;
 }
+
+.texto {
+  height: 90%;
+}
+
 
 .texto {
     display: flex;
