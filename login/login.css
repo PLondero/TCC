@@ -1,0 +1,60 @@
+body {
+    background-color: #36465D;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+
+.login {
+    background-color: whitesmoke;
+    width: 350px;
+    height: 500px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+}   
+
+.conteudo {
+    margin-left: 40px;
+}
+
+.conteudo h1 {
+    color: #36465D;
+}
+
+.conteudo input {
+    border: #e0e0e0 solid 0.5px;
+    border-radius: 20px;
+    width: 80%;
+    height: 30px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+input::placeholder {
+    color:#e0e0e0;
+}
+
+.img {
+    background-image: url(bmvindo.svg);
+    width: 450px;
+    height: 500px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+#sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}

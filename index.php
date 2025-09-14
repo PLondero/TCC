@@ -28,7 +28,7 @@
                     <a href="quiz/quiz.html">
                         <button> <p> Home </p> </button>
                         </a>
-                        <a href="login/telalogin.php">
+                        <a href="login/telalogin.html">
                         <button> <p> Entrar </p> </button>
                         </a>
                 </div>
