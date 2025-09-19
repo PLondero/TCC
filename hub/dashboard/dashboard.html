@@ -101,7 +101,7 @@
                     <h1>Bancos:</h1>
                 </div>
                 <div class="box" id="box5">
-                    <h1>Despesas</h1>
+                    <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
                 </div>
             </div>
 
@@ -142,6 +142,53 @@ new Chart(ctx, {
     plugins: {
       legend: { display: true,
         position: "right",
+      }
+    }
+  }
+});
+</script>
+
+<script>
+const xValues2 = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues = [55, 49, 44, 24, 15];
+const barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+const ctx2 = document.getElementById('myChart2');
+
+new Chart(ctx2, {
+  type: "pie",
+  data: {
+    labels: xValues2,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues,
+      borderColor: "#4b6180"
+    }]
+  },
+  options: {
+    plugins: {
+      legend: {
+        display:true,
+        position: "bottom",
+        labels: {
+        color: "white",
+        },
+      },
+      title: {
+        display: true,
+        text: "Despesas:",
+        align: "start",
+        font: {size:20,
+            family: "Bebas Neue, sans-serif",
+        },
+        
+        color: "white",
       }
     }
   }
