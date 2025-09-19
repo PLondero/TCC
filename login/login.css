@@ -21,6 +21,11 @@ body {
     align-items: center;
 }   
 
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 .conteudo {
     margin-left: 40px;
 }
@@ -31,10 +36,10 @@ body {
 
 .conteudo input {
     border: #e0e0e0 solid 0.5px;
-    border-radius: 20px;
-    width: 80%;
-    height: 30px;
-    margin-bottom: 5px;
+    border-radius: 10px;
+    width: 110%;
+    height: 40px;
+    margin-bottom: 8px;
     padding: 5px;
 }
 
@@ -50,6 +55,10 @@ input::placeholder {
     border-bottom-left-radius: 20px;
 }
 
+#dois {
+    background-image: url(bmvindo2.svg);
+}
+
 #sour-gummy {
   font-family: "Sour Gummy", sans-serif;
   font-optical-sizing: auto;
@@ -57,4 +66,48 @@ input::placeholder {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+
+a button {
+    transition: 0.7s;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+}
+
+a button:active {
+    transform: scale(0.5);
+}
+
+.entrar {
+    background-color:#314055 ;
+    color: white;
+    padding: 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    width: 113%;
+}
+
+.entrar:hover {
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+.entrar:not(:hover){
+  transition: 0.7s;
+}
+
+
+.entrar:active {
+  transform: scale(0.90);
+  transition: 0.2s;
 }

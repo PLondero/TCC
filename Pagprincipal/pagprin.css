@@ -15,10 +15,17 @@ p {
   letter-spacing: 1px;
 }
 
+button {
+  cursor: pointer;
+}
+
 .imginicial{
   background-image: url(img1.svg);
-  background-repeat: no-repeat;
-  height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;     
+    background-position: center; 
+    height: 100vh;               
+    width: 100vh;               
 }
 
 .headertopo {   
@@ -26,7 +33,7 @@ p {
   display: flex;
   align-items: center;       
   justify-content: flex-end; 
-  height: 120px;             
+  height: 120px;              
   padding: 0 40px;
   position: relative;        
   font-family: 'Bebas Neue', sans-serif;
@@ -44,6 +51,7 @@ p {
   align-items: center;
   gap: 5px;
   text-align: center;
+  color: white;
 }
 
 .imglogo {
@@ -91,7 +99,7 @@ p {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 400;
     font-style: normal;
-    color:#36465D;
+    color: white;
     width: 30%;
     font-size: 60px;
 }
@@ -129,38 +137,3 @@ p {
 
 
 
-
-
-@media screen and (max-width: 1020px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .headertopo h1 {
-    font-size: 20px;
-  }
-  
-  .headertopo p {
-    font-size: 10px;
-  }
-
-  .botheader {
-    gap: 0.5px;
-  }
-
-  .texto h1{
-    font-size: 20px;
-  }
-
-  
-}
