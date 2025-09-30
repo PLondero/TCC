@@ -1,19 +1,21 @@
 
 .container {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     display: flex;
-    gap:50px;
+    gap: 30px;
 }
 
+
 nav {
-    background-color: #36465D;
-    height: 100%;
-    width: 100px;
-    display: flex;  
+    position: fixed;      
+    height: 100vh;        
+    width: 5vw;          
+    background: #36465D;   
+    display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
+    padding-top: 20px;
 }
 
 nav img {
@@ -23,6 +25,7 @@ nav img {
 .dashboard {
     display: flex;
     flex-direction: column;
+    margin-left: 15vh;
 }
 
 .boxes {
@@ -50,18 +53,18 @@ button {
 .home h1, .financeiro h1, .calendario h1, .planejamento h1{
     font-size: 30px;
     color: white;
-    text-shadow: 2px 2px 0 #36465D, 2px -2px 0 #36465D, -2px 2px 0 #36465D, -2px -2px 0 #36465D, 2px 0px 0 #36465D, 0px 2px 0 #36465D, -2px 0px 0 #36465D, 0px -2px 0 #36465D, -4px -5px 3px rgba(255,255,255,0);
     letter-spacing: 1px;
     position: absolute;
     left: 70px; 
     opacity: 0;
-    transform: translateX(-10px);
     transition: all 0.3s ease;
 }
 
 .home:hover h1, .financeiro:hover h1, .calendario:hover h1, .planejamento:hover h1{
     opacity: 1;
-    transform: translateX(0);
+    background-color: #36465D;
+    border-radius: 10px;
+    height: 50PX;
 }
 
 

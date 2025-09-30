@@ -33,10 +33,10 @@
 
 
                 <div class="botheader">
-                    <a href="login/telalogin.html">
+                    <a href="login/telalogin.php">
                         <button> <p> Entrar </p> </button>
                         </a>
-                        <a href="login/cadastrar.html">
+                        <a href="login/cadastrar.php">
                         <button> <p> Cadastrar </p> </button>
                         </a>
                 </div>
@@ -50,7 +50,7 @@
                 <div class="texto">
                     <h1> Comece hoje sua jornada na educação financeira!    </h1>
                     <div class="botoes">
-                    <a href="" class="botao1"> 
+                    <a href="login/cadastrar.php" class="botao1"> 
                         <h2> Clique aqui! </h2>
                     </a>
                     

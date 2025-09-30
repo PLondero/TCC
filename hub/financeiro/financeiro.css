@@ -1,0 +1,113 @@
+
+.boxes {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.boxes2 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.boxes3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.box2 {
+    width: 50VH;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #bb6767,  #F08484);
+    color: white;
+}
+
+.box {
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #4b6180,  #587296) ;
+    width: 40vh;
+    height: auto;
+    color: white;
+}
+
+#box1 {
+    width: 180vh;
+    height: 200px; 
+    background-image: linear-gradient(to right, #4a7a5b,  #609e76);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#box1 h1 {
+    align-self: center;
+    font-size: 50px;
+}
+
+
+#box3 input {
+    width: 90%;
+    border: #e0e0e0 solid 0.5px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 20px;
+}
+
+
+
+form button {
+    margin-top: 10px;
+     background-color:white ;
+    color: #314055;
+    padding: 5px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    width: 50%;
+}
+
+form button:hover {
+    transform: scale(1.02);
+    transition: 1s;
+}
+
+form button:not(:hover){
+  transition: 0.7s;
+}
+
+
+form button:active {
+  transform: scale(0.90);
+  transition: 0.2s;
+}
+
+.button {
+    margin-top: 10px;
+     background-color:white ;
+    color: #314055;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    transition: box-shadow 0.5s ease, transform 0.3s ease;
+    height: 20px;
+}
+
+.conta {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
