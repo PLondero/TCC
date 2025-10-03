@@ -12,15 +12,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     $stmt = $conn->prepare("INSERT INTO planejamento (meta, valor_total, valor_atual, id_usuario) VALUES (?, ?, ?, ?)");
     $stmt->bind_param("sddi", $meta, $valor_total, $valor_atual, $id_usuario);
-
-    if ($stmt->execute()) {
+    $stmt->execute();
+    if ($stmt->affected_rows === 0) {
+        echo "Erro ao inserir: " . $stmt->error;
+        exit;
+    } else {
+        echo "Meta adicionada com sucesso!";
         $conn->commit();
         $stmt->close();
         header("Location: planejamento.php");
-        exit;
-    } else {
-        echo "Erro ao inserir: " . $stmt->error;
     }
+        
 }
 ?>
 

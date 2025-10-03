@@ -83,19 +83,28 @@
                         <p> <?php echo date("d/m/Y"); ?> </p>
                         <div class="info">
                             <p>Salário atual:</p>
-                            <h1>00,00</h1>
+                            <h1> <?php echo $conn->query("SELECT saldo FROM usuarios WHERE id_usuario={$_SESSION["id_usuario"]}")->fetch_assoc()["saldo"]?></h1>
                             <p>Valor para completar as metas</p>
                             <h1> 00,00</h1>
                         </div>  
                     </div>  
                     <div class="timeline">
                         <h3>Próximas Conclusões</h3>
-                        <div class="evento">
-                            <p></p>
-                        </div>
-                        <div class="evento">
-                            <p></p>
-                        </div>
+                        <?php
+                                $result = $conn->query("SELECT meta FROM planejamento WHERE id_usuario={$_SESSION["id_usuario"]}");
+                                if ($result->num_rows > 0){
+                                    while($row = $result->fetch_assoc()){
+                                        echo "
+                                            <div class='evento'>
+                                              <p> {$row['meta']} </p>
+                                            </div>
+                                        ";
+                                    }
+                                } else {
+                                    echo "<p> Nenhuma meta </p>";
+                                }
+                            ?>
+                        
                         </div>
 
                 </div>

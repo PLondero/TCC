@@ -132,7 +132,18 @@ if (!isset ($_SESSION["id_usuario"])){
                     <h1>Metas:</h1>
                     <div class="total">
                         <h4>Total de Metas</h4>
-                        <p>3</p>
+                        <p><?php
+                            $id_usuario = (int) $_SESSION["id_usuario"];
+
+                                $result = $conn->query("SELECT COUNT(*) AS total FROM planejamento WHERE id_usuario = $id_usuario");
+
+                                if ($result) {
+                                    $row = $result->fetch_assoc();
+                                    echo $row["total"]; // quantidade de metas salvas
+                                } else {
+                                    echo "Erro na consulta: " . $conn->error;
+                                }
+                        ?></p>
                         </div>
                         <div>
                         <h4>Concluídas</h4>
@@ -187,13 +198,13 @@ new Chart(ctx, {
       data: dadosReceita,           
       borderColor: "green",
       pointRadius: 2,
-      tension: 0.4,
+      tension: 0.2,
       label: "Receitas",
     }, { 
       data: dadosGastos,
       borderColor: "red",
       pointRadius: 2,
-      tension: 0.4,
+      tension: 0.2,
       label: "Gastos",
     },
     {
@@ -229,8 +240,10 @@ new Chart(ctx, {
     ?>]
 
 
-    const xValues2 = [razaodespesas];
-    const yValues = [valor];
+
+
+    const xValues2 = razaodespesas;
+    const yValues = valor;
     const barColors = [
     "#b91d47",
     "#00aba9",
