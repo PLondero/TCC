@@ -6,6 +6,7 @@ Educação Financeira no Ensino Básicio Brasileiro.
 
 ## Site
 Site feito como desenvolvimento do trabalho, com a proposta de permitir pessoas sem acesso a uma educação de qualidade entederem um pouco mais sobre cuidar de suas financias.
+https://educamoney.infinityfree.me
 
 ## Linguagens e progamas usados
 
