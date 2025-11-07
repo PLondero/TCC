@@ -14,6 +14,7 @@
 .boxes3 {
     display: flex;
     flex-direction: row;
+    gap: 20px;
 }
 
 .box2 {
@@ -22,6 +23,15 @@
     padding: 10px;
     border-radius: 5px;
     background-image: linear-gradient(to right, #bb6767,  #F08484);
+    color: white;
+}
+
+.box3 {
+    width: 50VH;
+    height: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #71bb8b,  #9fdcb4);
     color: white;
 }
 
@@ -109,5 +119,6 @@ form button:active {
 .conta {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
 }

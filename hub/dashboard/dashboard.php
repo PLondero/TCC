@@ -147,12 +147,14 @@ if (!isset ($_SESSION["id_usuario"])){
                         </div>
                         <div>
                         <h4>Concluídas</h4>
-                        <p>1</p>
+                        <p>
+                            <?php
+                            $result = $conn->query("SELECT COUNT(*) AS concluidas FROM planejamento WHERE (valor_atual >= valor_total)");
+                            $row = $result->fetch_assoc();
+                            echo $row["concluidas"];
+                            ?>
+                        </p>
                         </div>
-                        <div>
-                        <h4>Progresso Médio</h4>
-                        <p>45%</p>
-                    </div>
                 </div>
                 <div class="box" id="box5">
                     <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>

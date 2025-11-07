@@ -172,7 +172,32 @@
                                 $result = $conn->query("SELECT razao, valor, dia FROM valores_fixos WHERE id_usuario={$_SESSION["id_usuario"]} AND valor < 0 ORDER BY dia ASC");
                                 if ($result->num_rows > 0){
                                     while($row = $result->fetch_assoc()){
-                                        echo "<div class='conta'> <p>" . $row["razao"] . " - R$ " . $row["valor"] . " - Dia: " . $row["dia"] . "</p> <button class='button'> Pagar </button> </div>";
+                                        echo "<div class='conta'> 
+                                        <p>" . $row["razao"] . " - R$ " . $row["valor"] . " - Dia: " . $row["dia"] . "</p>
+                                        </div> 
+                                        ";
+                                        
+                                    }
+                                } else {
+                                    echo "<p> Nenhuma conta a pagar </p>";
+                                }
+
+
+                            ?>
+                        </p>
+                    </div>
+               
+                <div class="box3">
+                       <h1>Contas a receber:</h1>
+                        <p>
+                            <?php
+                                $result = $conn->query("SELECT razao, valor, dia FROM valores_fixos WHERE id_usuario={$_SESSION["id_usuario"]} AND valor > 0 ORDER BY dia ASC");
+                                if ($result->num_rows > 0){
+                                    while($row = $result->fetch_assoc()){
+                                        echo "<div class='conta'> 
+                                        <p>" . $row["razao"] . " - R$ " . $row["valor"] . " - Dia: " . $row["dia"] . "</p> 
+                                        </div> 
+                                        ";
                                         
                                     }
                                 } else {
@@ -180,7 +205,6 @@
                                 }
                             ?>
                         </p>
-                    </div>
                 </div>
                 
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 03/10/2025 às 04:08
+-- Tempo de geração: 07/11/2025 às 02:14
 -- Versão do servidor: 9.1.0
 -- Versão do PHP: 8.3.14
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `educamoney`
 --
-CREATE DATABASE IF NOT EXISTS `educamoney` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
-USE `educamoney`;
 
 -- --------------------------------------------------------
 
@@ -38,16 +36,15 @@ CREATE TABLE IF NOT EXISTS `planejamento` (
   `id_usuario` int NOT NULL,
   PRIMARY KEY (`id`),
   KEY `id_usuario` (`id_usuario`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Despejando dados para a tabela `planejamento`
 --
 
 INSERT INTO `planejamento` (`id`, `meta`, `valor_total`, `valor_atual`, `id_usuario`) VALUES
-(1, 'comprar carro', 3000.00, 0.00, 1),
-(2, 'viagem a praia', 1500.00, 0.00, 1),
-(3, 'casa', 15000.00, 0.00, 1);
+(13, 'comprar carro', 5000.00, 1206.00, 1),
+(12, 'viagem a praia', 1555.00, 1568.00, 1);
 
 -- --------------------------------------------------------
 
@@ -100,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `nome_usuario`, `email_usuario`, `senha`, `saldo`) VALUES
-(1, 'londero', 'pedroslondero6@gmail.com', '$2y$10$itrZ0I.uigVD.oQFMIgc.uQNpNZZoqTPgyVObEWu2wNukvBs9ePdG', 4593.00),
+(1, 'londero', 'pedroslondero6@gmail.com', '$2y$10$itrZ0I.uigVD.oQFMIgc.uQNpNZZoqTPgyVObEWu2wNukvBs9ePdG', 3685.00),
 (2, 'predokareis', 'predokareis@gmail.com', '$2y$10$wW6t3dgVEgWB5QOwHS8L2u3YI1b1zH0lEyA2NA5N223FXBcrp.1..', 0.00);
 
 -- --------------------------------------------------------

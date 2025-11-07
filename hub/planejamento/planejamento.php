@@ -85,7 +85,13 @@
                             <p>Salário atual:</p>
                             <h1> <?php echo $conn->query("SELECT saldo FROM usuarios WHERE id_usuario={$_SESSION["id_usuario"]}")->fetch_assoc()["saldo"]?></h1>
                             <p>Valor para completar as metas</p>
-                            <h1> 00,00</h1>
+                            <h1> 
+                                <?php 
+                                    $result = $conn->query("SELECT SUM(valor_total - valor_atual) AS total_necessario FROM planejamento WHERE id_usuario={$_SESSION["id_usuario"]}");
+                                    $row = $result->fetch_assoc();
+                                    echo $row['total_necessario'] ? $row['total_necessario'] : 0;
+                                ?>
+                            </h1>
                         </div>  
                     </div>  
                     <div class="timeline">
@@ -118,28 +124,30 @@
 
                           <div class="metas">
                             <?php
-                                $result = $conn->query("SELECT meta, valor_total, valor_atual FROM planejamento WHERE id_usuario={$_SESSION["id_usuario"]}");
+                                $result = $conn->query("SELECT meta, valor_total, valor_atual, id FROM planejamento WHERE id_usuario={$_SESSION["id_usuario"]}");
                                 if ($result->num_rows > 0){
                                     while($row = $result->fetch_assoc()){
                                         $porcentagem = ($row['valor_total'] > 0) ? ($row['valor_atual'] / $row['valor_total']) * 100 : 0;
                                         if ($porcentagem > 100) $porcentagem = 100; 
                                         echo "
                                             <div class='meta-card'>
-                                              <h4>{$row['meta']}</h4>
+                                              <h4 id='{$row['meta']}'>{$row['meta']}</h4>
                                               <p class='valores'>R$ <span class='atual'>{$row['valor_atual']}</span> / <span class='objetivo'>{$row['valor_total']}</span></p>
                                               <div class='progress'>
                                                 <div class='barra' style='width: {$porcentagem}%;'></div>
                                               </div>
                                               <div class='acoes'> 
-                                                <button class='add'>+ Adicionar valor</button>
-                                                <button class='del'>🗑 Apagar</button>
+                                                <button  class='add' name='add' onclick='adicionarValor(\"{$row['id']}\")'>+ Adicionar valor</button>
+                                                <button  class='del' name='del' onclick='apagarMeta(\"{$row['id']}\")'>🗑 Apagar</button>
                                               </div>
                                             </div>
                                         ";
+                                        
                                     }
                                 } else {
                                     echo "<p> Nenhuma meta </p>";
                                 }
+
                             ?>
                           </div>
 
@@ -197,6 +205,40 @@ window.onclick = (event) => {
 }
 </script>   
 
+<script>
+    function adicionarValor(metaId) {
+        const valor = prompt("Digite o valor a ser adicionado:");
+        if (valor !== null) {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'handler.php'); 
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
+            var params = "meta=" + encodeURIComponent(metaId) 
+            params += "&&additional=" + encodeURIComponent(valor); 
+            params += "&&name=addMeta" 
+            
+            xhr.send(params);
+
+            window.location.reload(true);
+        }
+    }
+
+
+    function apagarMeta(metaId) {
+        if (confirm("Tem certeza que deseja apagar esta meta?")) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "handler.php");
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            var params = "meta=" + encodeURIComponent(metaId) 
+            params += "&&name=deleteMeta" 
+            
+            xhr.send(params);
+            alert(`Meta ID: ${metaId} apagada.`);
+            window.location.reload(true);
+        }
+    }
+
+    
+</script>
 
 </html>

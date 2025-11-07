@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include('../../php/conexao.php');    
+?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -86,12 +91,40 @@
                         <h1> Buscar transações: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
 </svg></h1>
-                        <form>
+                        <form method="post" action="">
                             <P> Selecione o periodo:</P>
                             <label for="data1">Data1:</label><input type="date" id="data1" name="data1">
                             <label for="data2">Data2:</label><input type="date" id="data2" name="data2"> <br><br>
                             <button type="submit"> Buscar</button>
                         </form>
+                        <div class='historico-list'>
+                                <?php
+                                    $stmt = $conn->prepare("SELECT razao, valor, data_entrada FROM transacao WHERE id_usuario = ? AND data_entrada >= ? AND data_entrada <= ?");
+                                    $stmt->bind_param("iss", $_SESSION["id_usuario"], $_POST["data1"], $_POST["data2"]);
+                                    $stmt->execute();
+                                    $result = $stmt->get_result();
+                                    if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo  "
+                                                    <div class='meta-card'>
+                                                    <p> {$row['razao']}</p>
+                                                        <p class='valores'> valor: {$row['valor']}</p>
+                                                        <p class='valores'> data: {$row['data_entrada']}</p>
+                                                    </div> <br>
+                                            ";
+                                    }
+                                    }
+                                    else {
+                                        echo  "
+                                                <div class='meta-card'>
+                                                <h4> Nenhuma transação encontrada </h4>
+                                                <p class='valores'> Por favor, ajuste o período e tente novamente. </p>
+                                                </div> <br>
+                                            ";
+                                    }
+                                    
+                                ?>
+                            </div>
                     </div>  
                 </div>
             </section>
